@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optimal Mini-Market</title>
+    <!-- Lien vers Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Lien vers Font Awesome pour les icônes -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Optimal Mini-Market</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Inventaire</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Ventes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Rapports</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section d'accueil -->
+    <section class="header-section">
+        <div class="logo-placeholder">
+            <!-- Logo ici -->
+        </div>
+        <h1>Bienvenue sur le site d'Optimal Mini-Market</h1>
+        <p>Votre boutique de confiance pour tous vos besoins quotidiens.</p>
+        <a href="#" class="btn btn-custom">Découvrir nos produits</a>
+    </section>
+
+    <!-- Section de gestion des stocks -->
+    <section class="content-section">
+        <h2>Gestion des stocks</h2>
+        <p>Ajoutez, modifiez ou supprimez des produits facilement.</p>
+        
+        <!-- Bouton pour afficher le formulaire -->
+        <button class="btn btn-custom" id="addProductButton">
+            <i class="fas fa-plus-circle"></i> Ajouter un produit
+        </button>
+        <button class="btn btn-custom" id="addProductButton">
+            <i class="fas fa-plus-circle"></i> Modifier un produit
+        </button>
+
+<!-- Formulaire d'ajout de produit (initialement caché) -->
+<div class="add-product-form d-none" id="productForm">
+    <h3>Ajouter un produit</h3>
+    <form id="productFormContent">
+        <div class="mb-3">
+            <label for="productName" class="form-label">Nom du produit</label>
+            <input type="text" class="form-control" id="productName" placeholder="Nom du produit" required>
+        </div>
+        <div class="mb-3">
+            <label for="productDescription" class="form-label">Description</label>
+            <textarea class="form-control" id="productDescription" rows="3" placeholder="Description du produit" required></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="productPrice" class="form-label">Prix</label>
+            <input type="number" class="form-control" id="productPrice" placeholder="Prix du produit" required>
+        </div>
+        <div class="mb-3">
+            <label for="productImage" class="form-label">Image du produit</label>
+            <input type="file" class="form-control" id="productImage" accept="image/*">
+        </div>
+        <button type="submit" class="btn btn-custom">Ajouter</button>
+    </form>
+</div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Optimal Mini-Market | Tous droits réservés</p>
+    </footer>
+
+    <!-- Lien vers Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+// Assurez-vous que le script est exécuté après le chargement du HTML
+document.addEventListener('DOMContentLoaded', function() {
+    // Assurez-vous que le bouton et le formulaire existent
+    const addProductButton = document.getElementById('addProductButton');
+    const productForm = document.getElementById('productForm');
+    
+    // Vérification pour s'assurer que les éléments existent
+    if (addProductButton && productForm) {
+        // Ajouter un gestionnaire d'événement au bouton
+        addProductButton.addEventListener('click', function() {
+            // Bascule la classe 'show' pour afficher ou cacher le formulaire
+            productForm.classList.toggle('show');
+        });
+    }
+
+    // Gestion du formulaire d'ajout de produit
+    const productFormContent = document.getElementById('productFormContent');
+    if (productFormContent) {
+        productFormContent.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const productName = document.getElementById('productName').value;
+            const productDescription = document.getElementById('productDescription').value;
+            const productPrice = document.getElementById('productPrice').value;
+            const productImage = document.getElementById('productImage').files[0];
+
+            // Simule l'ajout du produit avec une alerte
+            alert('Produit ajouté: ' + productName);
+
+            // Réinitialiser le formulaire et cacher à nouveau le formulaire
+            productFormContent.reset();
+            productForm.classList.remove('show');
+        });
+    }
+});
+
+</script>
+
+</body>
+</html>

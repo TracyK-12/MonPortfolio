@@ -1,0 +1,472 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+/* Effet Fade-In */
+#site {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInAnimation 1s ease-in-out forwards;
+}
+
+/* Animation Keyframes */
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+                 /* HEADER */
+header {
+    background-color: #ff6600; 
+    padding: 40px 0;
+    text-align: center;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    gap: 30%;
+}
+
+.logo img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-right: 20px;
+    background-color: white;
+}
+
+.description {
+    color: black;
+    font-size: 15px;
+    max-width: 500px;
+    text-align: left;
+    line-height: 1.5;
+}  
+                 /* MODAL CONNEXION TWITTER */
+
+.modal1 {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content1 {
+    background-color: #000;
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.logo1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.separator {
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+.terms {
+    font-size: 12px;
+    color: #aaa;
+}
+
+.terms a {
+    color:blue;
+    text-decoration: none;
+}
+
+.terms a:hover {
+    text-decoration: underline;
+}
+.btn a {
+    color: white;
+    text-decoration: none;
+
+}
+
+                                    /*MODAL ENREGISTREMENT AMAZON */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+
+.modal-content {
+    background-color: #fff;
+    color: black;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+}
+
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+.logo {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #ff9900;
+}
+
+
+.terms-register  {
+    font-size: 12px;
+    color: #666;
+}
+
+.terms-register  a {
+    color: #ff9900;
+    text-decoration: none;
+}
+
+.terms-register  a:hover {
+    text-decoration: underline;
+}
+
+
+                                          /* MAIN */
+            /* SECTION NAVGATION  */
+nav {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.skill-title {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+nav button {
+    color: white;
+    border: solid black 2px;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-html { background-color: #e34c26; } 
+.btn-css { background-color: #2965f1; } 
+.btn-js { background-color: #f7df1e; color: black; } 
+.btn-php { background-color: #777bb4; } 
+.btn-sql { background-color: #00758f; } 
+.btn-bootstrap { background-color: #563d7c; } 
+.btn-jquery { background-color: #0769ad; } 
+.btn-symfony { background-color: #86f36b; } 
+
+nav button:hover {
+    opacity: 0.8;
+    transform: scale(1.1);
+}
+
+nav button a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+                           /* BLOCK CONCEPTION, UI/UX */
+.blocks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30%;
+    padding: 50px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.bloc-text {
+    background-color: #3498db;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 45%;
+    min-height: 200px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.bloc-text:nth-child(odd) {
+    transform: translateY(-20px);
+}
+
+.bloc-text:nth-child(even) {
+    transform: translateY(20px);
+}
+
+.bloc-text:hover {
+    transform: scale(1.05);
+}
+                                /* SECTION PROJETS */
+#projet {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #ff6600;
+    color: white;
+}
+
+.projet-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+.projet {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    border: solid black 2px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 200px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+}
+
+.projet-title {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.projet1, .projet2, .projet3, .projet4 {
+    grid-row: 1;
+}
+
+.projet5 {
+    grid-column: 2 / 3;
+    grid-row: 2;
+    margin-right: 20px auto;
+}
+
+.projet6 {
+    grid-column: 3 / 4;
+    grid-row: 2;
+}
+
+.btn-projet {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: auto;
+}
+
+.projet:hover {
+    transform: scale(1.05); /* Zoom léger */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+.btn-projet:hover {
+    background-color: #333;
+}
+ 
+                            /* BOUTTON TOGGLE DROPUP/DROPDOWN */
+.toggle-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.toggle-btn .icon {
+    font-size: 18px;
+    transition: transform 0.3s ease;
+    color: black;
+}
+
+.toggle-btn.active .icon {
+    transform: rotate(180deg);
+}
+
+.toggle-btn:hover {
+    background-color: #e65c00;
+}
+
+#footer {
+    background-color: #222;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+                                    /* FOOTER */
+/*   SECTION FORMULAIRE */
+#form {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+}
+
+#form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#form input, 
+#form textarea {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#form textarea {
+    min-height: 120px;
+    resize: none;
+}
+
+#form button {
+    background-color: #ff6600;
+    color: white;
+    padding: 12px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#form button:hover {
+    background-color: #e65c00;
+}
+    /* SECTION COPYRIGJHT */
+#foot {
+    background-color: #111;
+    padding: 15px 0;
+    margin-top: 20px;
+}
+
+#foot p {
+    font-size: 14px;
+    margin: 0;
+}
+                                /* RESPONSIVES */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .logo img {
+        margin-bottom: 15px;
+    }
+    .description {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    nav button {
+        width: 80%;
+        display: block;
+        margin: 10px auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .blocks {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .bloc-text {
+        width: 90%;
+        transform: translateY(0); 
+    }
+}
+
+@media (max-width: 768px) {
+    .projet-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .projet {
+        width: 90%;
+        margin: auto;
+        transform: translateY(0);
+    }
+}

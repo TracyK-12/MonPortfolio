@@ -1,0 +1,133 @@
+  /* Couleurs personnalisées */
+        body {
+            background-color: white;
+            color: #000;
+        }
+        .navbar {
+            background-color: #f1c40f; /* Jaune pour la navbar */
+        }
+        .navbar a {
+            color: #000; /* Texte noir dans la navbar */
+        }
+        .navbar a:hover {
+            color: #fff;
+        }
+        .header-section {
+            text-align: center;
+            padding: 50px;
+        }
+        .logo-placeholder {
+            width: 150px;
+            height: 150px;
+            background-color: #f39c12; /* Jaune */
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        .content-section {
+            padding: 40px;
+        }
+  
+       /* Effet de survol des boutons */
+       .btn-custom {
+        background-color: #f1c40f;
+        color: #000;
+        border: none;
+        transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+    }
+
+    .btn-custom:hover {
+        background-color: #f39c12;
+        transform: scale(1.05);
+    }
+
+   /* Formulaire caché au départ */
+.add-product-form {
+    display: none; /* Il est caché par défaut */
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out; /* Optionnel : effet de transition pour l'animation */
+}
+
+/* Lorsqu'il est visible */
+.add-product-form.show {
+    display: block; /* Il devient visible */
+    visibility: visible;
+    
+}
+
+    /* Animation d'entrée */
+    .header-section, .content-section {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 1s forwards;
+    }
+
+    @keyframes fadeInUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+/* Effet de survol sur les cartes d'inventaire */
+.card {
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-10px); /* Légère élévation de la carte */
+}
+
+/* Effet de survol sur les liens de la navbar */
+.navbar-nav .nav-link {
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #f39c12; /* Jaune au survol */
+}
+
+/* Fond de page sombre pour le footer */
+footer {
+    background-color: #333;
+    padding: 20px 0;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        footer {
+            background-color: #000;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optimal Mini-Market</title>
+    <!-- Lien vers Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Lien vers Font Awesome pour les icônes -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><i class="fa-solid fa-crown" style="color: #131410;"></i>Optimal Mini-Market</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="inventaire.html">Inventaire</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Ventes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Rapports</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+      <!-- Menu principal -->
+      <div class="menu">
+        <button id="viewProducts">Voir les produits</button>
+        <button id="addProduct" class="admin-only">Ajouter un produit</button> <!-- Réservé aux admins -->
+        <button id="manageUsers" class="admin-only">Gérer les utilisateurs</button> <!-- Réservé aux admins -->
+    </div>
+
+    <!-- Section d'accueil -->
+    <section class="header-section">
+       <!-- Section du logo (remplacée par une vidéo) -->
+<div id="logoPlaceholder" class="logo-placeholder">
+    <video width="200" height="200" autoplay loop muted>
+        <source src="img/OPTIMAL.mp4" type="video/mp4">
+        Ton navigateur ne supporte pas la balise vidéo.
+    </video>
+</div>
+
+        <h1>Bienvenue sur le site d'Optimal Mini-Market</h1>
+        <p>Votre boutique de confiance pour tous vos besoins quotidiens.</p>
+        <a href="#" class="btn btn-custom">Découvrir nos produits</a>
+
+    </section>
+ <!-- Section de présentation du magasin -->
+ <section id="presentation">
+    <div class="container">
+        <!-- Section "À propos" -->
+        <div class="about-section">
+            <h2>À propos de nous</h2>
+            <img class="img-optimal" src="img/optimal.jpg" alt="">
+            <p>Optimal Mini-Market est une boutique locale dédiée à vous offrir une expérience de shopping rapide et de qualité. Nous proposons une large gamme de produits alimentaires, de boissons, ainsi que des articles ménagers de tous les jours.</p>
+        </div>
+
+        <!-- Section "Description du shop" -->
+        <div class="shop-description">
+            <h3>Notre boutique</h3>
+            <p>Chez Optimal Mini-Market, nous mettons un point d'honneur à vous fournir des produits frais, abordables et de qualité. Notre équipe s'efforce de répondre à vos besoins quotidiens avec des rayons bien remplis et un service client irréprochable. Nous offrons également une expérience de shopping en ligne avec une livraison à domicile rapide pour plus de commodité.</p>
+            <p>Venez découvrir nos promotions du mois et profitez de nos offres exclusives !</p>
+        </div>
+    </div>
+</section>
+   
+<!-- Formulaire d'ajout de produit (initialement caché)
+<div class="add-product-form d-none" id="productForm">
+    <h3>Ajouter un produit</h3>
+    <form id="productFormContent">
+        <div class="mb-3">
+            <label for="productName" class="form-label">Nom du produit</label>
+            <input type="text" class="form-control" id="productName" placeholder="Nom du produit" required>
+        </div>
+        <div class="mb-3">
+            <label for="productDescription" class="form-label">Description</label>
+            <textarea class="form-control" id="productDescription" rows="3" placeholder="Description du produit" required></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="productPrice" class="form-label">Prix</label>
+            <input type="number" class="form-control" id="productPrice" placeholder="Prix du produit" required>
+        </div>
+        <div class="mb-3">
+            <label for="productImage" class="form-label">Image du produit</label>
+            <input type="file" class="form-control" id="productImage" accept="image/*">
+        </div>
+        <button class="submit" type="submit" class="btn btn-custom">Ajouter</button>
+    </form>
+</div> -->
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Optimal Mini-Market | Tous droits réservés</p>
+    </footer>
+
+    <!-- Lien vers Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+</body>
+</html>

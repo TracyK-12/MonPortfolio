@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="site">
+                                                <!-- HEADER -->
+        <header>
+            <div class="header-container">
+                <div class="logo"><img src="img/web-removebg-preview.png" alt=""></div>
+                    <p class="description">Je suis Developpeur Web Junior passionné par la <br>Programmation et le dévéloppement web. J'ai une bonne <br>connaissance des langages HTML, CSS, PHP, JavaScript et <br> SQL. Je suis également à l'aise avec les frameworks <br> Bootstrap et JQuery. Je suis actuellement en formation chez <br> OpenClassrooms pour devenir développeur d'application PHP/ <br>Symfony. 
+                    </p>
+                    
+            </div>
+
+                  
+    <div class="d-flex justify-content-between mb-3">
+        <button id="openModal" class="btn bg-black text-white mt-5 me-2">Se connecter</button>
+        <button id="openRegisterModal" class="btn bg-black text-white mt-5">S'inscrire</button>
+        <button id="openModal" class="ms-auto btn bg-black text-white  mt-5"><a href="#form">Nous contacter</a></button>           
+    </div>   
+        </div>
+        <!-- MODAL CONNEXION-->
+            <div id="modal1" class="modal1">
+        <div class="modal-content1">
+            <span class="close">&times;</span>
+            <div class="logo1"><i class="fa-brands fa-x-twitter"></i></div>
+            <h2>Rejoignez X dès aujourd'hui</h2>
+
+            <button class="btn btn-light w-100 my-2">
+                <i class="fa-brands fa-google"></i> Se connecter avec Google
+            </button>
+            
+            <button class="btn btn-light w-100 my-2">
+                <i class="fa-brands fa-apple"></i> S'inscrire avec Apple
+            </button>
+
+            <div class="separator">OU</div>
+
+            <button class="btn btn-outline-light w-100 my-2">Créer un compte</button>
+
+            <p class="terms mt-3">
+                En vous inscrivant, vous acceptez les 
+                <a href="#">Conditions d'utilisation</a> et la 
+                <a href="#">Politique de confidentialité</a>, 
+                notamment <a href="#">l'utilisation des cookies</a>.
+            </p>
+
+            <p class="mt-3">Vous avez déjà un compte ? <a href="#" class="text-primary">Connectez-vous</a></p>
+        </div>
+    </div>
+
+    <!-- MODAL D'ENREGISTREMENT -->
+<div id="registerModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span> <!-- Bouton de fermeture -->
+        <div class="logo"><i class="fa-brands fa-amazon"></i></div>
+        <h2>Créer un compte</h2>
+
+        <!-- Formulaire -->
+        <form id="registerForm">
+            <div class="mb-3">
+                <label class="form-label">Votre nom</label>
+                <input type="text" class="form-control" id="name" placeholder="Prénom et nom" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Numéro de téléphone ou adresse e-mail</label>
+                <input type="email" class="form-control" id="email" placeholder="Votre email" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Mot de passe</label>
+                <input type="password" class="form-control" id="password" placeholder="Au moins 6 caractères" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Confirmez le mot de passe</label>
+                <input type="password" class="form-control" id="confirmPassword" placeholder="Entrez à nouveau votre mot de passe" required>
+            </div>
+
+            <button type="submit" class="btn btn-warning w-100">Continuer</button>
+        </form>
+
+        <p class="terms-register mt-3">
+            En créant un compte, vous acceptez les 
+            <a href="#">conditions d'utilisation</a> et la 
+            <a href="#">politique de confidentialité</a>.
+        </p>
+    </div>
+</div>
+
+
+        </header>                   
+                                             <!-- MAIN -->
+                                
+     <main>
+                                         <!-- NAVIGATION -->
+            <section id="skills">
+                <nav>
+                    <h2 class="skill-title">Compétences</h2>
+                    <ul>
+                        <button class="btn-html"> <a href="#">HTML</a></button>
+                        <button class="btn-css"> <a href="#">CSS</a></button>
+                        <button class="btn-js"> <a href="#">JavaScript</a></button>
+                        <button class="btn-php"> <a href="#">PHP</a></button>
+                        <button class="btn-sql"> <a href="#">SQL</a></button>
+                        <button class="btn-bootstrap"> <a href="#">Bootstrap</a></button>
+                        <button class="btn-jquery"> <a href="#">jQuery</a></button>
+                        <button class="btn-symfony"> <a href="#">Symfony</a></button>
+                    </ul>
+                </nav>
+                                            <!-- BLOCK CONCEPTION ET UI/UX -->
+            
+                <div class="blocks">
+                    <div class="bloc-text">
+                        <h2>Conception</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque ut molestiae rerum.
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat, excepturi architecto recusandae magnam quis vitae.
+                        </p>
+                    </div>
+                    <div class="bloc-text">
+                        <h2>UI/UX</h2>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam animi a delectus?
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus, reiciendis. Amet delectus sapiente autem quibusdam.
+                        </p>
+                    </div>
+                </div>
+                
+            </section>
+                                         <!-- SECTION PROJET -->
+            <section id="projet">
+                <h2 class="projet-title">Projets</h2>
+                <div class="projet-container">
+                    <div class="projet projet1">
+                        <h3>Projet 1</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non purus non mauris eleifend.</p>
+                        <button class="btn-projet">En voir plus</button>
+                    </div>
+                    <div class="projet projet2">
+                        <h3>Projet 2</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non purus non mauris eleifend.</p>
+                        <button class="btn-projet">En voir plus</button>
+                    </div>
+                    <div class="projet projet3">
+                        <h3>Projet 3</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non purus non mauris eleifend.</p>
+                        <button class="btn-projet">En voir plus</button>
+                    </div>
+                    <div class="projet projet4">
+                        <h3>Projet 4</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non purus non mauris eleifend.</p>
+                        <button class="btn-projet">En voir plus</button>
+                    </div>
+                    
+                    <div class="projet projet5">
+                        <h3>Projet 5</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non purus non mauris eleifend.</p>
+                        <button class="btn-projet">En voir plus</button>
+                    </div>
+                    <div class="projet projet6">
+                        <h3>Projet 6</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non purus non mauris eleifend.</p>
+                        <button class="btn-projet">En voir plus</button>
+                    </div>
+                </div>
+            </section>
+            
+            
+        </main>
+                                   <!-- FOOTER -->
+
+
+       <footer id="footer">
+                    <!-- FORMULAIRE -->
+    <section id="form">
+        <h2>Contact</h2>
+        <form action="">
+            <input type="text" placeholder="Nom" required>
+            <input type="text" placeholder="Prénom" required>
+            <input type="email" placeholder="Email" required>
+            <textarea name="message" id="message" placeholder="Votre message..." required></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+        
+            <button id="openModal" class=" btn bg-white  mt-5"><a href="#site"><i class="fa-solid fa-sort-up fa-2xl" style="color: #0f0f10;"></i></a></button>           
+            
+        
+    </section>
+                   <!-- COPYRIGHT -->
+    <section id="foot">
+        <p>© 2025 - Tous droits réservés | Mon Portfolio</p>
+    </section>
+</footer>
+
+    </div>
+                            <!-- LIENS SCRIPT JAVASCRIPT -->
+       <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

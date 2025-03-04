@@ -1,0 +1,308 @@
+  /* Couleurs personnalisées */
+        body {
+            background-color: white;
+            color: #000;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .navbar {
+            background-color: #f1c40f; /* Jaune pour la navbar */
+        }
+        .navbar a {
+            color: #000; /* Texte noir dans la navbar */
+        }
+        .navbar a:hover {
+            color: #fff;
+        }
+        .header-section {
+            text-align: center;
+            padding: 50px;
+        }
+
+        
+.menu {
+    background-color: #34495e;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #f1c40f;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #f39c12;
+}
+
+button.admin-only {
+    background-color: #e67e22;
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+/* Styles pour le contenu principal */
+#content {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#content h2 {
+    color: #2c3e50;
+}
+
+#content p {
+    color: #7f8c8d;
+}
+
+/* Cacher les éléments réservés aux admins */
+.admin-only {
+    display: none;
+}
+
+
+
+       /* Ajuster la taille de la vidéo pour qu'elle ne soit pas trop grande */
+.logo-placeholder video {
+    max-width: 100%;  /* Assure que la vidéo prend toute la largeur disponible sans déborder */
+    height: auto;     /* Garde les proportions de la vidéo */
+    border-radius: 10px; /* Pour ajouter des bords arrondis si tu veux */
+}
+
+        .content-section {
+            padding: 40px;
+        }
+  
+       /* Effet de survol des boutons */
+       .btn-custom {
+        background-color: #f1c40f;
+        color: #000;
+        border: none;
+        transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+    }
+
+    .btn-custom:hover {
+        background-color: #f39c12;
+        transform: scale(1.05);
+    }
+
+   /* Formulaire caché au départ
+.add-product-form {
+    display: none; /* Il est caché par défaut */
+    /* opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out; /* Optionnel : effet de transition pour l'animation */
+/* } */ 
+
+/* Lorsqu'il est visible */
+/* .add-product-form.show {
+    display: block; /* Il devient visible */
+    /* visibility: visible;
+    
+} */ 
+  /* Style du fond du modal */
+.modal-background {
+    display: none;
+    position: fixed;
+    top: 100%;
+    background-color: #ffe57c;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    -webkit-animation-name: fadeIn; /* Fade in the background */
+  -webkit-animation-duration: 0.4s;
+  animation-name: fadeIn;
+  animation-duration: 0.4s
+}
+
+/* Style du contenu du modal (agrandi) */
+.modal-content {
+    background-color: #434343;
+    padding: 50px; /* Augmenter l'espace interne */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Assurer un centrage parfait */
+    width: 800px; /* Largeur plus grande */
+    height: auto; /* Hauteur ajustée automatiquement */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optionnel : Ajout d'une ombre pour l'effet */
+    -webkit-animation-name: slideIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: slideIn;
+    animation-duration: 0.4s
+}
+
+/* Style du bouton de fermeture */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+       
+        .text{
+            color: white;
+        }
+
+
+    /* Animation d'entrée */
+    .header-section, .content-section {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 1s forwards;
+    }
+    @-webkit-keyframes slideIn {
+        from {bottom: -300px; opacity: 0} 
+        to {bottom: 0; opacity: 1}
+      }
+      
+      @keyframes slideIn {
+        from {bottom: -300px; opacity: 0}
+        to {bottom: 0; opacity: 1}
+      }
+      
+    
+      
+
+    @keyframes fadeInUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+/* Effet de survol sur les cartes d'inventaire */
+.card {
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-10px); /* Légère élévation de la carte */
+}
+
+/* Effet de survol sur les liens de la navbar */
+.navbar-nav .nav-link {
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #f39c12; /* Jaune au survol */
+
+}
+/* Styles pour la section de présentation du magasin */
+#presentation {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #f1c40f;  /* Jaune pour mettre en valeur */
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #f39c12; /* Une nuance de jaune pour une hiérarchie visuelle */
+}
+
+.about-section, .shop-description {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-section p, .shop-description p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+}
+.img-optimal{
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    h2, h3 {
+        font-size: 1.5rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* Fond de page sombre pour le footer */
+footer {
+    background-color: #333;
+    padding: 20px 0;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        footer {
+            background-color: #000;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
