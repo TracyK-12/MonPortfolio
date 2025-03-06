@@ -414,19 +414,24 @@ ul button:hover {
 }
 
                  /* Media Queries */
-                @media (max-width: 1400px) {
+                @media  (max-width: 1400px) {
                   .container {
                     width: 95%;
                   }
+                  
                   .about-content {
                     width: 70%;
                   }
                 }
 
-                @media (max-width: 992px) {
-                  /* body {
-                    font-size: 60px;
-                  } */
+                @media  (max-width: 1024px) {
+                  body {
+                    font-size: 16px;
+                    max-width: 90%;
+                  }
+                  .links a{
+                    font-size: 25px;
+                  }
                   .menu i {
                     font-size: 60px;
                   }
@@ -492,15 +497,25 @@ ul button:hover {
                 }
 
                 @media (max-width: 768px) {
+                  body{
+                    font-size: 14px;
+                    max-width: 95%;
+                  }
+                  .links a{
+                    font-size: 18px;
+                  }
                   .menu i {
                     font-size: 30px;
                   }
                   #hamburger-logo {
-                    width: 210px;
+                    width: 280px;
                     transform: translateX(-210px);
                   }
                   nav {
                     width: 200px;
+                  }
+                  nav a{
+                    font-size: 25px;
                   }
                   .profile img {
                     width: 100px;
@@ -513,79 +528,130 @@ ul button:hover {
                   .btn {
                     padding: 8px 12px;
                   }
-                  .about-content {
-                    width: 80%;
-                  }
-                  .projets {
-                    width: 85%;
-                  }
-                  .container {
-                    width: 80%;
-                  }
-                }
-
-                @media (max-width: 576px) {
-                  body {
-                    font-size: 12px;
-                  }
-                  .menu i {
-                    font-size: 25px;
-                  }
-                  #hamburger-logo {
-                    width: 210px;
-                    transform: translateX(-210px);
-                  }
-                  .container {
-                    width: 70%;
-                  }
-                  .profile img {
-                    width: 80px;
-                    height: 80px;
-                  }
-                  .cursor {
-                    font-size: 12px;
-                    width: 21em;
-                  }
-                  .btn {
-                    padding: 6px 10px;
+                  .about-btn {
+                    font-size: 15px;
                   }
                   .about-content {
                     width: 70%;
                   }
-                  .projets {
-                    width: 75%;
+                  .about-content h3{
+                    font-size: 30px;
                   }
-                }
-
-                @media (max-width: 320px) {
-                  body {
-                    font-size: 10px;
-                  }
-                  .menu i {
+                  .about-content p{
                     font-size: 20px;
                   }
-                  #hamburger-logo {
-                    width: 150px;
-                    transform: translateX(-150px);
+                  .about-content ul{
+                    font-size: 20px;
                   }
-                  nav {
-                    width: 150px;
+                    #langues .about-content ul{
+                      font-size: 15px;
+                    }
+                    .projet-container {
+                      gap: 20px;
+                      width: 70%;
+                    }
+                    .projets {
+                      width: 85%;
+                    }
+                    .btn-project {
+                      font-size: 20px;
+                    }
+                    #contact {
+                      width: 80%;
+                    }
+                    #contact-form {
+                      width: 80%;
+                    }
+                    .contact-title {
+                      font-size: 30px;
+                    }
+                    #contact-form label {
+                      font-size: 20px;
+                    }
+                    .container {
+                      width: 80%;
+                    }
                   }
-                  .profile img {
-                    width: 60px;
-                    height: 60px;
-                  }
-                  .cursor {
-                    font-size: 10px;
-                    width: 18em;
-                  }
-                  .btn {
-                    padding: 4px 8px;
-                  }
-                  .about-content {
-                    width: 60%;
-                  }
-                  .projets {
-                    width: 65%;
-                  }
-                }
+                
+                  @media (max-width: 480px) {
+                    body{
+                      font-size: 12px;
+                      max-width: 100%;
+                    }
+                    .links a{
+                      font-size: 15px;
+                    }
+                    .menu i {
+                      font-size: 20px;
+                    }
+                    #hamburger-logo {
+                      width: 280px;
+                      transform: translateX(-210px);
+                    }
+                    nav {
+                      width: 200px;
+                    }
+                    nav a{
+                      font-size: 20px;
+                    }
+                    .profile img {
+                      width: 100px;
+                      height: 100px;
+                    }
+                    .cursor {
+                      font-size: 20px;
+                      width: 21em;
+                    }
+                    .btn {
+                      padding: 8px 12px;
+                    }
+                    .about-btn {
+                      font-size: 15px;
+                    }
+                    .about-content {
+                      width: 60%;
+                    }
+                    .about-content h3{
+                      font-size: 20px;
+                    }
+                    .about-content p{
+                      font-size: 15px;
+                    }
+                    .about-content ul{
+                      font-size: 15px;
+                    }
+                      
+                      .projet-container {
+                        gap: 20px;
+                        width: 75%;
+                      }
+                      .projets {
+                        width: 70%;
+                      }
+                      .btn-project {
+                        font-size: 15px;
+                      }
+                      #contact {
+                        width: 70%;
+                      }
+                      #contact-form {
+                        width: 70%;
+                      }
+                      .contact-title {
+                        font-size: 20px;
+                      }
+                      #contact-form label {
+                        font-size: 15px;
+                      }
+                      #contact-form input {
+                        width: 100%;
+                        height: 40px;
+                      }
+                      .container {
+                        width: 70%;
+                      }
+                    }
+                  
+  
+  
+
