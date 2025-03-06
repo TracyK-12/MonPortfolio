@@ -1,13 +1,12 @@
-
-                                       /* Styles généraux */
+/* Styles généraux */
 body {
-  font-family: cursive;
+  font-family: sans-serif;
   margin: 0;
   padding: 0;
   background: linear-gradient(135deg, #fce3e3, #f279a1);
   text-align: center;
-  
 }
+
 /* LOGO */
 .logo {
   font-size: 20px;
@@ -16,13 +15,10 @@ body {
   text-decoration: none;
 }
 
-
-                              /* MENU HEADER Navbar */
+/* MENU HEADER Navbar */
 .menu {
-  /* Pour que le menu reste en place quand on scroll */
   position: fixed;
-  /* Pour que le menu ne soit pas sur le texte et que ce dernier puisse être sélectionné */
-  width: 0px;
+  width: 250px; /* Set an appropriate width */
 }
 .menu i {
   font-size: 50px;
@@ -30,43 +26,40 @@ body {
   padding: 10px;
 }
 #hamburger {
-  /* Pour que la checkbox ne s'affiche pas */
   display: none;
 }
 
 #hamburger-logo {
-  /* Pour que le curseur soit un pointeur */
   cursor: pointer;
   width: 250px;
   display: block;
-  /* Pour que le menu hamburger s'affiche toujours */
   text-align: right;
-  /* Pour que le menu hamburger soit "rangé" par défaut */
-  transform: translateX(-168px);
+  transform: translateX(-150px);
   padding: 10px;
 }
 
 nav {
   display: flex;
   flex-direction: column;
-  background: black;
+  background: black linear-gradient(135deg, #fce3e3, #f279a1);
+  position: fixed;
   overflow: hidden;
+  border: solid black 2px;
+  border-radius: 10px;
+  
   width: 200px;
   font-size: 20px;
-  /* Pour que les liens soient "rangés" par défaut */
-  transform: translateX(-200px);
+  transform: translateX(-300px);
+  margin: 0;
 }
 
 #hamburger-logo,
 nav {
-  /* Pour qu'il y ait une animation */
   transition: 0.7s;
 }
 
-/* Lorsque #hamburger est coché, le #hamburger-logo et le nav qui sont dans le même parent changent de propriété */
 #hamburger:checked ~ #hamburger-logo,
 #hamburger:checked ~ nav {
-  /* Changement de la position pour afficher les menus */
   transform: translate(0);
 }
 
@@ -79,7 +72,6 @@ nav a {
 nav a:hover {
   background: #444;
 }
-
 
 /* Conteneur principal */
 .container {
@@ -103,12 +95,11 @@ nav a:hover {
   height: 150px;
   box-sizing: border-box;
   border: 5px white solid;
-  border-radius: 50% solid white;
+  border-radius: 50%;
   overflow: hidden;
   box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
   transform: translateY(0px);
-
-  position: fixed;
+  position: absolute;
   right: 20px;
   top: 20px;
 }
@@ -135,28 +126,29 @@ nav a:hover {
 .cursor {
   position: relative;
   width: 24em;
-  margin: 80px auto 0; /* Add top margin to create space from nav-bar */
-  border-right: 2px solid rgba(255,255,255,.75);
+  margin: 80px auto 0;
+  border-right: 2px solid rgba(255, 255, 255, .75);
   font-size: 30px;
   text-align: center;
   white-space: nowrap;
   overflow: hidden;
-  }
-  .typewriter-animation {
-    animation: 
-      typewriter 5s steps(50) 1s infinite normal both, 
-      blinkingCursor 500ms steps(50) infinite normal;
-  }
-  @keyframes typewriter {
-    from { width: 0; }
-    to { width: 35ch; } /* Adapte la largeur au texte */
-  }
+}
+.typewriter-animation {
+  animation: 
+    typewriter 5s steps(50) 1s infinite normal both, 
+    blinkingCursor 500ms steps(50) infinite normal;
+}
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 35ch; }
+}
 
-  @keyframes blinkingCursor {
-    from { border-right-color: rgba(255,255,255,.75); }
-    to { border-right-color: transparent; }
-  }
-  /* BOUTTON RESEAUX SOCIAUX */
+@keyframes blinkingCursor {
+  from { border-right-color: rgba(255, 255, 255, .75); }
+  to { border-right-color: transparent; }
+}
+
+/* BOUTTON RESEAUX SOCIAUX */
 .btn {
   display: inline-block;
   background-color: #1a191a;
@@ -184,7 +176,7 @@ section {
 }
 
 .about-btn {
-  color:  #d85b87;
+  color: #d85b87;
   border: solid black 2px;
   padding: 10px 20px;
   margin: 5px;
@@ -196,7 +188,6 @@ section {
 }
 .about-btn:hover {
   background-color: white;
-  
 }
 
 .about-content {
@@ -213,8 +204,8 @@ section {
   opacity: 0.8;
   transform: scale(1.1);
 }
-/*  SECTION COMPETENCES  */
 
+/* SECTION COMPETENCES */
 ul button {
   color: white;
   border: solid black 2px;
@@ -231,26 +222,12 @@ ul button a {
   text-decoration: none;
   display: block;
 }
- 
-
-/* .btn-html { background-color: #e34c26; } 
-.btn-css { background-color: #2965f1; } 
-.btn-js { background-color: #f7df1e; color: black; } 
-.btn-php { background-color: #777bb4; } 
-.btn-sql { background-color: #00758f; } 
-.btn-bootstrap { background-color: #563d7c; } 
-.btn-jquery { background-color: #0769ad; } 
-.btn-symfony { background-color: #86f36b; } 
-.btn-react { background-color: #61dbfb; }
-.btn-nodejs { background-color: #68a063; }
-.btn-bureautique { background-color: #f34f29; }
-.btn-java { background-color: #6e5494; } */
-
 
 ul button:hover {
   opacity: 0.8;
   transform: scale(1.1);
 }
+
 /* SECTION LANGUES */
 #langues {
   margin-top: 30px;
@@ -298,12 +275,12 @@ ul button:hover {
   padding: 0;
 }
 
-#langues li {
-  font-size: 16px;
+#langues ul li {
+  font-size: 25px;
   margin: 5px 0;
 }
 
-/*  SECTION PROJETS  */
+/* SECTION PROJETS */
 #projets {
   background-color: white;
   padding: 40px 0;
@@ -353,8 +330,8 @@ ul button:hover {
   background-color: #f279a1;
   opacity: 0.8;
   transform: scale(1.1);
- 
 }
+
 .btn-project {
   background-color: black;
   color: white;
@@ -369,22 +346,24 @@ ul button:hover {
   background-color: #333;
 }
 
-
-
-
-
-
 /* SECTION CONTACT */
-
-.contact-section {
-  background-color: linear-gradient(135deg, #fce3e3, #f279a1);
+#contact {
   padding: 40px 0;
-  top: 50px; 
+  top: 50px;
   width: 50%;
   margin: auto;
   gap: 30px;
   border-radius: 10px;
   text-align: center;
+}
+#contact-form {
+  background-color: #f279a1;
+  padding: 30px;
+  border-radius: 8px;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+  width: 70%;
+  margin: auto;
 }
 
 .contact-title {
@@ -392,7 +371,6 @@ ul button:hover {
   margin-bottom: 20px;
   color: #141314;
 }
-
 
 .contact-name {
   font-size: 24px;
@@ -422,6 +400,7 @@ ul button:hover {
 .contact-email-link:hover {
   text-decoration: underline;
 }
+
 #foot {
   background-color: #111;
   padding: 15px 0;
@@ -433,3 +412,180 @@ ul button:hover {
   margin: 0;
   color: white;
 }
+
+                 /* Media Queries */
+                @media (max-width: 1400px) {
+                  .container {
+                    width: 95%;
+                  }
+                  .about-content {
+                    width: 70%;
+                  }
+                }
+
+                @media (max-width: 992px) {
+                  /* body {
+                    font-size: 60px;
+                  } */
+                  .menu i {
+                    font-size: 60px;
+                  }
+                  #hamburger-logo {
+                    width: 300px;
+                    transform: translateX(-210px);
+                  }
+                  nav {
+                    width: 300px;
+                  }
+                  .cursor {
+                    font-size: 30px;
+                    width: 21em;
+                    z-index: -1;
+                  }
+                  nav a{
+                    font-size: 40px;
+                  }
+                  .container {
+                    width: 90%;
+                  }
+                  .about-btn {
+                    font-size: 30px;
+                  }
+                  .about-content {
+                    width: 80%;
+                  }
+                  .about-content h3{
+                    font-size: 40px;
+                  }
+                  .about-content p{
+                    font-size: 30px;
+                  }
+                  .about-content ul{
+                    font-size: 30px;
+                  }
+                 
+                  .projets {
+                    width: 70%;
+                  }
+                  #contact {
+                    width: 70%;
+                  }
+                  #contact-form {
+                    width: 100%;
+                  }
+                  #contact-form input {
+                    width: 100%;
+                    height: 60px;
+                  }
+                  #contact-form label {
+                    font-size: 40px;
+                  }
+                  .contact-title {
+                    font-size: 60px;
+                  }
+                  .btn-project {
+                    font-size: 40px;
+                  }
+                  .projets{
+                    font-size: 40px;
+                  }
+                }
+
+                @media (max-width: 768px) {
+                  .menu i {
+                    font-size: 30px;
+                  }
+                  #hamburger-logo {
+                    width: 210px;
+                    transform: translateX(-210px);
+                  }
+                  nav {
+                    width: 200px;
+                  }
+                  .profile img {
+                    width: 100px;
+                    height: 100px;
+                  }
+                  .cursor {
+                    font-size: 20px;
+                    width: 21em;
+                  }
+                  .btn {
+                    padding: 8px 12px;
+                  }
+                  .about-content {
+                    width: 80%;
+                  }
+                  .projets {
+                    width: 85%;
+                  }
+                  .container {
+                    width: 80%;
+                  }
+                }
+
+                @media (max-width: 576px) {
+                  body {
+                    font-size: 12px;
+                  }
+                  .menu i {
+                    font-size: 25px;
+                  }
+                  #hamburger-logo {
+                    width: 210px;
+                    transform: translateX(-210px);
+                  }
+                  .container {
+                    width: 70%;
+                  }
+                  .profile img {
+                    width: 80px;
+                    height: 80px;
+                  }
+                  .cursor {
+                    font-size: 12px;
+                    width: 21em;
+                  }
+                  .btn {
+                    padding: 6px 10px;
+                  }
+                  .about-content {
+                    width: 70%;
+                  }
+                  .projets {
+                    width: 75%;
+                  }
+                }
+
+                @media (max-width: 320px) {
+                  body {
+                    font-size: 10px;
+                  }
+                  .menu i {
+                    font-size: 20px;
+                  }
+                  #hamburger-logo {
+                    width: 150px;
+                    transform: translateX(-150px);
+                  }
+                  nav {
+                    width: 150px;
+                  }
+                  .profile img {
+                    width: 60px;
+                    height: 60px;
+                  }
+                  .cursor {
+                    font-size: 10px;
+                    width: 18em;
+                  }
+                  .btn {
+                    padding: 4px 8px;
+                  }
+                  .about-content {
+                    width: 60%;
+                  }
+                  .projets {
+                    width: 65%;
+                  }
+                }
