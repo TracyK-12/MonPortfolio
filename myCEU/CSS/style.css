@@ -1,0 +1,183 @@
+/* Styles personnalisés */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa; /* Gris clair pour l'arrière-plan */
+    transition: background-color 0.3s ease;
+}
+
+body:hover {
+    background-color: #e2e6ea; /* Changement de couleur de fond au survol */
+}
+
+header {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Légère ombre pour l'en-tête */
+    transition: box-shadow 0.3s ease;
+}
+
+header:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée au survol */
+}
+
+h1 {
+    color: #007bff; /* Bleu principal de Bootstrap */
+    transition: color 0.3s ease;
+}
+
+h1:hover {
+    color: #0056b3; /* Bleu foncé au survol */
+}
+
+/* S'assurer que le footer reste en bas */
+html, body {
+    height: 100%; /* Permet à la page de toujours occuper 100% de la hauteur */
+    margin: 0;    /* Supprime les marges par défaut */
+    display: flex;
+    flex-direction: column; /* Organise la page en colonnes */
+}
+
+main {
+    flex: 1; /* Permet à la partie principale de prendre tout l'espace disponible */
+}
+
+/* Section Avantages avec icônes */
+.advantage-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #ffffff; /* Fond blanc */
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.advantage-card:hover {
+    transform: translateY(-10px); /* Soulèvement */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée */
+}
+
+.advantage-card .advantage-icon {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.advantage-card:hover .advantage-icon {
+    transform: scale(1.2); /* Zoom de l'icône */
+    color: #007bff; /* Change la couleur de l'icône au survol */
+}
+
+.advantage-card .advantage-text h5 {
+    transition: color 0.3s ease;
+}
+
+.advantage-card:hover .advantage-text h5 {
+    color: #007bff; /* Change la couleur du titre au survol */
+}
+
+.advantage-card .advantage-text p {
+    color: #6c757d; /* Gris pour le texte */
+}
+
+.col:hover {
+    opacity: 0.8;
+    transform: scale(1.1);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Style pour le footer */
+footer {
+    background-color: #343a40; /* Fond sombre */
+    color: white; /* Texte blanc */
+    text-align: center; /* Centrer le texte */
+    padding: 10px 0; /* Espacement vertical */
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+footer:hover {
+    background-color: #23272b; /* Fond plus sombre au survol */
+}
+
+footer h4 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    transition: color 0.3s ease;
+}
+
+footer h4:hover {
+    color: #007bff; /* Change la couleur du titre au survol */
+}
+
+footer form .form-label {
+    font-weight: bold;
+}
+
+footer form .form-control {
+    border-radius: 0.25rem;
+    border: 1px solid #ced4da;
+    transition: border-color 0.3s ease;
+}
+
+footer form .form-control:focus {
+    border-color: #007bff; /* Change la couleur de la bordure au focus */
+}
+
+footer form button {
+    background-color: #007bff; /* Bleu Bootstrap */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+/* Style pour la section portfolio */
+#portfolio {
+    padding: 3rem 0;
+    background-color: #f8f9fa; /* Couleur de fond claire */
+}
+
+#portfolio h2 {
+    color: #343a40; /* Couleur sombre pour le titre */
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    transition: color 0.3s ease;
+}
+
+#portfolio h2:hover {
+    color: #007bff; /* Change la couleur du titre au survol */
+}
+
+#portfolio .card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#portfolio .card:hover {
+    transform: scale(1.05); /* Agrandissement de la carte au survol */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée */
+}
+
+#portfolio .card-img-top {
+    transition: transform 0.3s ease;
+}
+
+#portfolio .card:hover .card-img-top {
+    transform: scale(1.1); /* Agrandissement de l'image au survol */
+}
+
+#portfolio .card-title {
+    color: #007bff; /* Couleur principale pour le titre */
+    transition: color 0.3s ease;
+}
+
+#portfolio .card-title:hover {
+    color: #0056b3; /* Couleur foncée au survol */
+}
+
+#portfolio .card-text {
+    color: #6c757d; /* Couleur grise pour le texte */
+}
+footer form button:hover {
+    background-color: #0056b3; /* Bleu foncé au survol */
+    transform: scale(1.05); /* Légère augmentation de la taille au survol */
+}

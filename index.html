@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tracy KAJE - Développeuse Web</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/framer-motion/dist/framer-motion.umd.js"></script>
+  </head>
+  <body class="bg-gray-950 text-white font-sans">
+    <!-- Header -->
+    <header class="fixed top-0 w-full z-50 bg-gray-900 bg-opacity-80 backdrop-blur-sm shadow-md">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <h1 class="text-2xl font-bold text-pink-500">Tracy Kaje</h1>
+        <nav class="space-x-6">
+          <a href="#about" class="hover:text-pink-400 transition">A propos</a>
+          <a href="#skills" class="hover:text-pink-400 transition">Compétences</a>
+          <a href="#projects" class="hover:text-pink-400 transition">Projets</a>
+          <a href="#contact" class="hover:text-pink-400 transition">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="h-screen flex flex-col justify-center items-center text-center px-6 pt-24">
+      <div class="text-5xl font-bold leading-tight mb-6">
+        <span id="heroText"></span>
+      </div>
+      <p class="text-lg text-gray-400">Conceptrice Développeuse d'Applications - Passionnée par la création web & mobile</p>
+      <div class="mt-8">
+        <a href="#projects" class="px-6 py-3 bg-pink-500 hover:bg-pink-600 rounded-full transition text-lg">Découvrir mes projets</a>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-900">
+      <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
+        <div class="flex-shrink-0">
+          <img src="img/profil-ia.jpg" alt="Tracy KAJE" class="rounded-full w-48 h-48 object-cover shadow-lg border-4 border-pink-500">
+        </div>
+        <div>
+          <h2 class="text-3xl font-bold text-pink-400 mb-4">A propos de moi</h2>
+          <p class="text-gray-300 leading-relaxed mb-4">
+            Je suis diplômée en sciences informatiques et actuellement en formation de Concepteur Développeur d’Applications (Niveau 6) chez M2I. Passionnée par le développement, je recherche un stage ou un contrat pour poursuivre mon Master en développement informatique.
+          </p>
+          <a href="CV/CV TRACY KAJE.pdf" target="_blank" class="inline-block mt-4 px-5 py-3 bg-pink-500 text-white rounded-full hover:bg-pink-600 transition">Télécharger mon CV</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20">
+      <div class="max-w-6xl mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold text-pink-400 mb-10">Mes Compétences</h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 text-white">
+          <div class="hover:scale-105 transition transform duration-300">HTML</div>
+          <div class="hover:scale-105 transition transform duration-300">CSS</div>
+          <div class="hover:scale-105 transition transform duration-300">JavaScript</div>
+          <div class="hover:scale-105 transition transform duration-300">PHP</div>
+          <div class="hover:scale-105 transition transform duration-300">SQL</div>
+          <div class="hover:scale-105 transition transform duration-300">Bootstrap</div>
+          <div class="hover:scale-105 transition transform duration-300">React / Node.js</div>
+          <div class="hover:scale-105 transition transform duration-300">Java</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-900">
+      <div class="max-w-6xl mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold text-pink-400 mb-10">Mes Projets</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+            <h3 class="text-xl font-bold mb-2">MY CEU</h3>
+            <p class="text-gray-400 mb-4">Commission Électorale Universitaire</p>
+            <a href="myCEU/index.php" target="_blank" class="text-pink-400 hover:underline">Voir le projet</a>
+          </div>
+          <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+            <h3 class="text-xl font-bold mb-2">Portfolio</h3>
+            <p class="text-gray-400 mb-4">Mon ancien portfolio web</p>
+            <a href="EPCF1-KAJE/index.html" target="_blank" class="text-pink-400 hover:underline">Voir le projet</a>
+          </div>
+          <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+            <h3 class="text-xl font-bold mb-2">OPTIMAL</h3>
+            <p class="text-gray-400 mb-4">Plateforme de gestion</p>
+            <a href="e-commerce/index.php" target="_blank" class="text-pink-400 hover:underline">Voir le projet</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+       <!-- Contact Section -->
+	   <section id="contact" class="py-20">
+		<div class="max-w-3xl mx-auto px-6 text-center">
+		  <h2 class="text-3xl font-bold text-pink-400 mb-6">Me Contacter</h2>
+		  <form id="contact-form" class="space-y-6">
+			<input id="name" type="text" placeholder="Nom" class="w-full p-3 rounded bg-gray-800 text-white" required>
+			<input id="email" type="email" placeholder="Email" class="w-full p-3 rounded bg-gray-800 text-white" required>
+			<textarea id="message" rows="5" placeholder="Message" class="w-full p-3 rounded bg-gray-800 text-white" required></textarea>
+			<button type="submit" class="px-6 py-3 bg-pink-500 hover:bg-pink-600 rounded-full transition">Envoyer</button>
+		  </form>
+		  <p id="feedback" class="mt-4 text-sm"></p>
+		</div>
+	  </section>
+
+    <!-- Footer -->
+    <footer class="py-6 text-center text-gray-500">
+      <p>© 2025 Tracy KAJE - Tous droits réservés</p>
+    </footer>
+
+    <!-- Framer Motion Animations -->
+	<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+	<script src="js/script.js"></script>
+	
+  </body>
+</html>
