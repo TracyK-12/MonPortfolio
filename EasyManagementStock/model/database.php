@@ -5,7 +5,7 @@
 function dbConnect() {
     $ctxDb = null;
 
-    $cnxStr = "mysql:host=localhost;dbname=data_store;charset=utf8";
+    $cnxStr = "mysql:host=localhost;dbname=data_nishboard;charset=utf8";
 
     try {
         $ctxDb = new PDO($cnxStr, 'root', '', array(

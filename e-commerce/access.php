@@ -3,6 +3,7 @@
 $accessList = [
     'home'=>[],
     'login'=>[],
+    'register'=>[],
     'logout'=>[],
     'get_all_prods'=>[],
     'add_prod'=>['user', 'admin'],

@@ -1,5 +1,5 @@
 <?php
-$title = "OPTIMAL - Connexion";
+$title = "OPTIMAL - Register";
 ob_start();
 ?>
 <?php if (isset($_SESSION['flash'])): ?>
@@ -9,8 +9,14 @@ ob_start();
     <?php unset($_SESSION['flash']); ?>
 <?php endif; ?>
 <div class="login-container d-flex justify-content-center align-items-center vh-100">
-    <form action="index.php?action=login" method="POST" class="glass-card p-4 rounded shadow">
-        <h2 class="text-center text-white mb-4">Connexion</h2>
+    <form action="index.php?action=register" method="POST" class="glass-card p-4 rounded shadow">
+        <h2 class="text-center text-white mb-4">Enregistrement</h2>
+        <div class="mb-3">
+            <input type="text" class="form-control" name="name" placeholder="Nom" required>
+        </div>
+        <div class="mb-3">
+            <input type="text" class="form-control" name="surname" placeholder="Prénom" required>
+        </div>
         <div class="mb-3">
             <input type="email" class="form-control" name="email" placeholder="Email" required>
         </div>
@@ -18,10 +24,8 @@ ob_start();
             <input type="password" class="form-control" name="password" placeholder="Mot de passe" required>
         </div>
         <div class="d-grid">
-            <button type="submit" class="btn btn-warning fw-bold text-uppercase">Se connecter</button>
+            <button type="submit" class="btn btn-warning fw-bold text-uppercase">S'inscrire</button>
         </div>
-        <div class="text-center mt-3">
-            <p class="text-white">Pas encore inscrit ? <a href="index.php?action=register" class="text-warning">Créer un compte</a></p>
     </form>
 </div>
 <?php

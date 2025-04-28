@@ -202,6 +202,10 @@ if (isset($_GET['action'])) {
             ctlLogin();
             break;
 
+        case 'register':
+            ctlRegister();
+            break;
+
         case 'logout':
             logout();
             break;

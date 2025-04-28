@@ -1,0 +1,46 @@
+
+
+
+/* INDEX */
+.hero-banner {
+  background-color: #2e6e5c;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  background-image: url('public/images/LogoNish.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.hero-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+.hero-banner > .content {
+  position: relative;
+  z-index: 1;
+}
+.feature-box {
+  background-color: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+.feature-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+.key-icon {
+  width: 30px;
+  margin-right: 10px;
+}
+  
+    /* FOOTER */
+footer a:hover {
+    color: #ffc107 !important;
+    transition: 0.3s ease;
+  }
+  

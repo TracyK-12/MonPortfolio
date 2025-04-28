@@ -41,29 +41,26 @@ ob_start();
               <?php endif; ?>
             </div>
 
-            <?php if (!isset($_SESSION['user']) || (isset($_SESSION['user']) && $_SESSION['user']->getStatut() === 'user')): ?>
-              <div class="d-flex justify-content-around mt-3">
-  <!-- Panier (accessible même hors connexion) -->
-  <a href="index.php?action=add_to_cart&id=<?= $p->getId() ?>" 
-   class="btn btn-sm btn-outline-success rounded-circle" title="Ajouter au panier">
-  🛒
-</a>
+            <div class="d-flex justify-content-around mt-3">
+        <!-- Panier (accessible même hors connexion) -->
+        <a href="index.php?action=add_to_cart&id=<?= $p->getId() ?>" 
+         class="btn btn-sm btn-outline-success rounded-circle" title="Ajouter au panier">
+        🛒
+      </a>
 
+        <!-- Liker (accessible même connecté) -->
+        <a href="index.php?action=<?= isset($_SESSION['user']) ? 'like_prod&id=' . $p->getId() : 'login' ?>" 
+         class="btn btn-sm btn-outline-danger rounded-circle" title="Liker">
+        ❤️
+        </a>
 
-  <!-- Liker (redirection si non connecté) -->
-  <a href="index.php?action=<?= isset($_SESSION['user']) ? 'like_prod&id=' . $p->getId() : 'login' ?>" 
-     class="btn btn-sm btn-outline-danger rounded-circle" title="Liker">
-    ❤️
-  </a>
+        <!-- Acheter (accessible même connecté) -->
+        <a href="index.php?action=<?= isset($_SESSION['user']) ? 'buy&id=' . $p->getId() : 'login' ?>" 
+         class="btn btn-sm btn-outline-warning rounded-circle text-dark" title="Acheter">
+        🧾
+        </a>
+      </div>
 
-  <!-- Acheter (redirection si non connecté) -->
-  <a href="index.php?action=<?= isset($_SESSION['user']) ? 'buy&id=' . $p->getId() : 'login' ?>" 
-     class="btn btn-sm btn-outline-warning rounded-circle text-dark" title="Acheter">
-    🧾
-  </a>
-</div>
-
-            <?php endif; ?>
           </div>
         </div>
       </div>
