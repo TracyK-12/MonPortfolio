@@ -1233,6 +1233,30 @@ html.dark .contact-card a {
     color: var(--primary-color);
 }
 
+.social-links-contact {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 1.3rem;
+}
+
+.social-icon:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(236, 72, 153, 0.4);
+}
+
 .contact-form-wrapper {
     padding: 20px;
 }
