@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Tracy KAJE | Portfolio</title>
+    <meta name="description" content="Contactez Tracy KAJE - Développeuse web & mobile">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body>
@@ -38,61 +39,73 @@
         </div>
     </header>
 
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Me Contacter</h1>
+            <p>Discutons de votre prochain projet!</p>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section class="contact-section">
         <div class="container">
-            <h2 class="section-title">Me Contacter</h2>
             <div class="contact-container">
+                <!-- Contact Info -->
                 <div class="contact-info">
-                    <h3>Informations de Contact</h3>
-                    
-                    <div class="contact-item">
+                    <h2>Informations</h2>
+                    <div class="contact-card">
                         <i class="fas fa-envelope"></i>
                         <div>
-                            <h4>Email</h4>
+                            <h3>Email</h3>
                             <a href="mailto:kaje.tracy@gmail.com">kaje.tracy@gmail.com</a>
                         </div>
                     </div>
 
-                    <div class="contact-item">
+                    <div class="contact-card">
                         <i class="fas fa-phone-alt"></i>
                         <div>
-                            <h4>Téléphone</h4>
+                            <h3>Téléphone</h3>
                             <p>+33 6 98 53 38 64</p>
                         </div>
                     </div>
 
-                    <div class="contact-item">
+                    <div class="contact-card">
                         <i class="fas fa-map-marker-alt"></i>
                         <div>
-                            <h4>Localisation</h4>
+                            <h3>Localisation</h3>
                             <p>Goussainville, Île-de-France, France</p>
                         </div>
                     </div>
 
-                    <div class="contact-item">
+                    <div class="contact-card">
                         <i class="fas fa-clock"></i>
                         <div>
-                            <h4>Disponibilité</h4>
+                            <h3>Disponibilité</h3>
                             <p>Lundi - Vendredi<br>09:00 - 18:00 (GMT+1)</p>
                         </div>
                     </div>
 
-                    <h3 style="margin-top: 2rem; color: var(--primary-color);">Réseaux Sociaux</h3>
-                    <div class="footer-socials" style="gap: 15px;">
-                        <a href="https://linkedin.com/in/tracy-kaje-2146a1255/" target="_blank" title="LinkedIn" style="width: 50px; height: 50px;">
+                    <h2 style="margin-top: 2rem;">Réseaux Sociaux</h2>
+                    <div class="social-links" style="margin-top: 1.5rem; gap: 20px;">
+                        <a href="https://linkedin.com/in/tracy-kaje-2146a1255/" target="_blank" class="social-link" title="LinkedIn">
                             <i class="fab fa-linkedin-in"></i>
+                            <span>LinkedIn</span>
                         </a>
-                        <a href="https://github.com/TracyK-12" target="_blank" title="GitHub" style="width: 50px; height: 50px;">
+                        <a href="https://github.com/TracyK-12" target="_blank" class="social-link" title="GitHub">
                             <i class="fab fa-github"></i>
+                            <span>GitHub</span>
                         </a>
-                        <a href="https://discord.gg/asHGdcfh" target="_blank" title="Discord" style="width: 50px; height: 50px;">
+                        <a href="https://discord.gg/asHGdcfh" target="_blank" class="social-link" title="Discord">
                             <i class="fab fa-discord"></i>
+                            <span>Discord</span>
                         </a>
                     </div>
                 </div>
 
-                <div>
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper">
+                    <h2>Envoyer un message</h2>
                     <form id="contact-form" class="contact-form">
                         <div class="form-group">
                             <label for="name">Nom *</label>
@@ -111,10 +124,10 @@
 
                         <div class="form-group">
                             <label for="message">Message *</label>
-                            <textarea id="message" name="message" required></textarea>
+                            <textarea id="message" name="message" rows="6" required></textarea>
                         </div>
 
-                        <button type="submit" class="submit-btn">
+                        <button type="submit" class="btn btn-primary">
                             <i class="fas fa-paper-plane"></i> Envoyer le message
                         </button>
 
@@ -122,12 +135,19 @@
                     </form>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- CTA Section -->
-            <div style="margin-top: 4rem; padding: 3rem 2rem; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); border-radius: 12px; color: white; text-align: center;">
-                <h3 style="margin-bottom: 1rem;">Prêt à collaborer?</h3>
-                <p style="margin-bottom: 1.5rem; opacity: 0.9;">Que ce soit pour un projet, une consultation ou simplement pour discuter, je suis toujours ouvert à de nouvelles opportunités!</p>
-                <p>N'hésitez pas à me contacter. Je répondrai à vos messages dans les 24 heures.</p>
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Prêt à collaborer?</h2>
+                <p>Que ce soit pour un projet, une consultation ou simplement pour discuter, je suis toujours ouvert à de nouvelles opportunités!</p>
+                <p style="opacity: 0.9;">N'hésitez pas à me contacter. Je répondrai à vos messages dans les 24 heures.</p>
+                <a href="mailto:kaje.tracy@gmail.com" class="btn btn-primary" style="margin-top: 1rem;">
+                    <i class="fas fa-envelope"></i> Me contacter directement
+                </a>
             </div>
         </div>
     </section>
@@ -169,6 +189,45 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // Initialize EmailJS
+        document.addEventListener('DOMContentLoaded', function() {
+            emailjs.init('lQfBY5vqDUIBGJUWo');
+
+            const contactForm = document.getElementById('contact-form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+
+                    const formData = {
+                        user_name: document.getElementById('name').value,
+                        user_email: document.getElementById('email').value,
+                        subject: document.getElementById('subject').value,
+                        message: document.getElementById('message').value
+                    };
+
+                    emailjs.send('service_g7cnh5b', 'template_tbe4ou2', formData)
+                        .then(function(response) {
+                            const messageDiv = document.querySelector('.form-message');
+                            messageDiv.textContent = '✅ Message envoyé avec succès!';
+                            messageDiv.style.color = 'var(--primary-color)';
+                            messageDiv.style.display = 'block';
+                            contactForm.reset();
+                            setTimeout(() => {
+                                messageDiv.style.display = 'none';
+                            }, 5000);
+                        }, function(error) {
+                            const messageDiv = document.querySelector('.form-message');
+                            messageDiv.textContent = '❌ Erreur lors de l\'envoi du message.';
+                            messageDiv.style.color = '#ef4444';
+                            messageDiv.style.display = 'block';
+                            console.error('EmailJS error:', error);
+                        });
+                });
+            }
+        });
+    </script>
 
     <script src="js/main.js"></script>
 </body>
