@@ -1,440 +1,180 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tracy KAJE - Développeuse Web & Mobile | Portfolio Professionnel</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracy KAJE - Développeuse Web & Mobile</title>
+    <meta name="description" content="Portfolio professionnel de Tracy KAJE - Développeuse web & mobile passionnée par la création d'expériences digitales innovantes">
+    <meta name="keywords" content="développeuse, web, mobile, frontend, backend, portfolio">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
-  <body class="font-sans bg-white text-gray-900 dark:bg-darkBg dark:text-white transition-colors duration-300">
-    <!-- Header -->
-    <header class="fixed top-0 w-full z-50 bg-white dark:bg-gray-900 bg-opacity-80 backdrop-blur-sm shadow-md">
-      <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        <h1 class="text-2xl font-bold text-pink-500">Tracy Kaje</h1>
-        <nav class="hidden md:flex space-x-6">
-          <a href="#about" class="hover:text-pink-400 transition">A propos</a>
-          <a href="#skills" class="hover:text-pink-400 transition">Compétences</a>
-          <a href="#projects" class="hover:text-pink-400 transition">Projets</a>
-          <a href="#contact" class="hover:text-pink-400 transition">Contact</a>
-        </nav>
-        <div class="flex items-center gap-4">
-          <button onclick="toggleTheme()" class="text-pink-500 text-xl" title="Changer de thème">
-            <i id="themeIcon" class="fas fa-moon"></i>
-          </button>
-          <button id="menuToggle" class="text-pink-500 text-xl md:hidden" title="Menu">
-            <i class="fas fa-bars"></i>
-          </button>
+<body>
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="container">
+            <div class="navbar-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <span class="logo-icon">TK</span>
+                        <span class="logo-text">Tracy KAJE</span>
+                    </a>
+                </div>
+                <nav class="nav-menu" id="navMenu">
+                    <a href="index.html" class="nav-link active">Accueil</a>
+                    <a href="about.html" class="nav-link">À Propos</a>
+                    <a href="projects.html" class="nav-link">Projets</a>
+                    <a href="skills.html" class="nav-link">Compétences</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </nav>
+                <div class="navbar-actions">
+                    <button class="theme-toggle" id="themeToggle" title="Changer de thème">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button class="menu-toggle" id="menuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
         </div>
-      </div>
-      <div id="mobileMenu" class="hidden md:hidden bg-white dark:bg-gray-900 shadow-md">
-        <nav class="flex flex-col space-y-4 p-4">
-          <a href="#about" class="hover:text-pink-400 transition">A propos</a>
-          <a href="#skills" class="hover:text-pink-400 transition">Compétences</a>
-          <a href="#projects" class="hover:text-pink-400 transition">Projets</a>
-          <a href="#contact" class="hover:text-pink-400 transition">Contact</a>
-        </nav>
-      </div>
     </header>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const menuToggle = document.getElementById("menuToggle");
-        const mobileMenu = document.getElementById("mobileMenu");
-
-        menuToggle.addEventListener("click", () => {
-          mobileMenu.classList.toggle("hidden");
-        });
-      });
-    </script>
-
-<section class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-32 pb-16">
-     <div class="text-5xl font-bold leading-tight mb-6">
-        <span id="heroText"></span>
-      </div>
-      <p class="text-lg text-gray-500">Conceptrice Développeuse d'Applications - Passionnée par la création web & mobile</p>
-      
-       <!--  liens linkedin, github et discord -->
-      <div class="flex justify-center items-center gap-4 mt-6">
-        <a href="https://www.linkedin.com/in/tracy-kaje-2146a1255/" target="_blank" class="text-pink-500 hover:text-pink-600 transition flex items-center justify-center">
-          <i class="fab fa-linkedin-in text-2xl"></i>
-        </a>
-        <a href="https://github.com/TracyK-12" target="_blank" class="text-pink-500 hover:text-pink-600 transition flex items-center justify-center">
-          <i class="fab fa-github text-2xl"></i>
-        </a>
-        <a href="https://discord.gg/asHGdcfh" target="_blank" class="text-pink-500 hover:text-pink-600 transition flex items-center justify-center">
-          <i class="fab fa-discord text-2xl"></i>
-        </a>
-      </div>
-      <div class="mt-8">
-        <a href="#projects" class="px-6 py-3 bg-pink-500 hover:bg-pink-600 rounded-full transition text-lg">Découvrir mes projets</a>
-      </div>
-    </section>
-
-    <section id="about" class="py-20 bg-white dark:bg-darkBg transition-colors duration-300">
-      <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
-        <div class="flex-shrink-0 mb-8 md:mb-0">
-          <img src="img/profil-ia.jpg" alt="Tracy KAJE" class="rounded-full w-48 h-48 object-cover shadow-lg border-4 border-pink-500">
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <div class="gradient-blob blob-1"></div>
+            <div class="gradient-blob blob-2"></div>
+            <div class="gradient-blob blob-3"></div>
         </div>
-        <div class="flex-1">
-          <h2 class="text-3xl font-bold text-pink-500 mb-4">À propos de moi</h2>
-          <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
-            Diplômée en sciences informatiques et actuellement en formation de Concepteur Développeur d’Applications (Niveau 6) chez M2I, je suis passionnée par le développement et motivée à mettre en pratique mes compétences sur des projets concrets.<br>
-            Aujourd’hui, je suis à la recherche de ma première opportunité professionnelle en tant que Développeuse Front-End Junior, dans le cadre d’un CDD, CDI, stage pré-embauche ou alternance.
-          </p>
-          
-          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 mb-6">
-            <!-- EMAIL -->
-            <div class="flex items-center justify-start">
-              <i class="fas fa-envelope text-pink-500 mr-2" aria-hidden="true"></i>
-              <a href="mailto:kaje.tracy@gmail.com" class="text-pink-500 hover:text-pink-600 transition" aria-label="Envoyer un email à kaje.tracy@gmail.com">kaje.tracy@gmail.com</a>
-            </div>
-            <!-- TELEPHONE -->
-            <div class="flex items-center justify-start">
-              <i class="fas fa-phone-alt text-pink-500 mr-2" aria-hidden="true"></i>
-              <span class="text-gray-600 dark:text-gray-300" aria-label="Téléphone">+33 6 98 53 38 64</span>
-            </div>
-            <!-- ADRESSE -->
-            <div class="flex items-center justify-start">
-              <i class="fas fa-map-marker-alt text-pink-500 mr-2" aria-hidden="true"></i>
-              <span class="text-gray-600 dark:text-gray-300" aria-label="Adresse">Goussainville, France</span>
-            </div>
-            <!-- LANGUE PARLEE -->
-            <div class="flex items-center justify-start">
-              <i class="fas fa-globe text-pink-500 mr-2" aria-hidden="true"></i>
-              <span class="text-gray-600 dark:text-gray-300" aria-label="Langues parlées">Français (courant), Anglais (B1), Allemand (A1)</span>
-            </div>
-          </div>
-
-          
-          <div class="flex flex-col sm:flex-row gap-4">
-            <a href="CV/CV_2025-05-18_Tracy_KAJE (updated) FR.pdf " target="_blank" class="px-5 py-3 bg-pink-500 text-white rounded-full hover:bg-pink-600 transition font-semibold shadow">Télécharger mon CV</a>
-            <a href="CV/CV_2025-05-18_Tracy_KAJE (updated) EN.pdf" target="_blank" class="px-5 py-3 bg-pink-500 text-white rounded-full hover:bg-pink-600 transition font-semibold shadow">Download my CV</a>
-            <a href="CV/CV_2025-05-18_Tracy_KAJE (updated) DEU.pdf" target="_blank" class="px-5 py-3 bg-pink-500 text-white rounded-full hover:bg-pink-600 transition font-semibold shadow">Mein Lebenslauf herunterladen</a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="skills" class="py-20 bg-white dark:bg-darkBg transition-colors duration-300">
-      <div class="max-w-6xl mx-auto px-6">
-        <h2 class="text-3xl font-bold text-pink-400 mb-10 text-center">Mes Compétences</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-          <!-- Front-End -->
-          <div class="bg-gray-100 dark:bg-gray-800 rounded-lg shadow p-6 flex flex-col items-center">
-            <h3 class="text-xl font-semibold text-pink-500 mb-4 flex items-center gap-2">
-              <i class="fas fa-laptop-code"></i> Front-End
-            </h3>
-            <ul class="space-y-2 text-gray-700 dark:text-gray-200 text-center">
-              <li class="hover:text-pink-500 transition">HTML</li>
-              <li class="hover:text-pink-500 transition">CSS</li>
-              <li class="hover:text-pink-500 transition">Tailwind CSS</li>
-              <li class="hover:text-pink-500 transition">Bootstrap</li>
-              <li class="hover:text-pink-500 transition">JavaScript</li>
-              <li class="hover:text-pink-500 transition">React </li>
-              <li class="hover:text-pink-500 transition">Angular</li>
-            </ul>
-          </div>
-
-          <!-- Back-End -->
-          <div class="bg-gray-100 dark:bg-gray-800 rounded-lg shadow p-6 flex flex-col items-center">
-            <h3 class="text-xl font-semibold text-pink-500 mb-4 flex items-center gap-2">
-              <i class="fas fa-server"></i> Back-End
-            </h3>
-            <ul class="space-y-2 text-gray-700 dark:text-gray-200 text-center">
-              <li class="hover:text-pink-500 transition">PHP</li>
-              <li class="hover:text-pink-500 transition">Java</li>
-              <li class="hover:text-pink-500 transition">Node.js</li>
-              <li class="hover:text-pink-500 transition">Spring Boot</li>
-              <li class="hover:text-pink-500 transition">Laravel</li>
-              <li class="hover:text-pink-500 transition">Symfony</li>
-              <li class="hover:text-pink-500 transition">API REST</li>
-            </ul>
-          </div>
-
-          <!-- Autres compétences -->
-          <div class="bg-gray-100 dark:bg-gray-800 rounded-lg shadow p-6 flex flex-col items-center">
-            <h3 class="text-xl font-semibold text-pink-500 mb-4 flex items-center gap-2">
-              <i class="fas fa-tools"></i> Autres
-            </h3>
-            <ul class="space-y-2 text-gray-700 dark:text-gray-200 text-center">
-              <li class="font-semibold text-pink-400">Base de données</li>
-              <li class="hover:text-pink-500 transition">SQL</li>
-              <li class="hover:text-pink-500 transition">NoSQL (MongoDB)</li>
-              <li class="font-semibold text-pink-400 mt-4">Outils & Méthodo</li>
-              <li class="hover:text-pink-500 transition">Git</li>
-              <li class="hover:text-pink-500 transition">UML</li>
-              <li class="hover:text-pink-500 transition">Agile (Scrum)</li>
-              <li class="hover:text-pink-500 transition">Bureautique</li>
-              <li class="font-semibold text-pink-400 mt-4">Design & Communication</li>
-              <li class="hover:text-pink-500 transition">Figma</li>
-              <li class="hover:text-pink-500 transition">Canva</li>
-              <li class="hover:text-pink-500 transition">Anglais professionnel</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects" class="py-20 bg-white text-gray-900 dark:bg-darkBg dark:text-white transition-colors duration-300">
-      <div class="max-w-6xl mx-auto px-6 text-center">
-        <h2 class="text-3xl font-bold text-pink-400 mb-10">Mes Projets</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Projet EMS -->
-          <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-lg flex flex-col items-center transition-colors duration-300">
-            <img src="img/ems/EMSLogo.png" alt="Logo EMS" class="w-26 h-24 object-contain mb-4">
-            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1">EMS</h3>
-            <p class="text-gray-500 dark:text-gray-400 text-sm mb-4">Application de gestion de stock (PHP / MySQL)</p>
-            <div class="flex gap-4">
-              <button onclick="openModal('modalEMS')" class="bg-pink-500 hover:bg-pink-600 text-white px-4 py-2 rounded text-sm transition">Voir plus</button>
-              <a href="https://github.com/TracyK-12/EMS" target="_blank" class="bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded text-sm transition">Code source</a>
-            </div>
-          </div>
-          <!-- Projet OPTIMAL_STORE -->
-          <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-lg flex flex-col items-center transition-colors duration-300">
-            <img src="img/optimal/logo optimal.png" alt="Logo Optimal Store" class="w-27 h-24 object-contain mb-4">
-            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1">Optimal Store</h3>
-            <p class="text-gray-500 dark:text-gray-400 text-sm mb-4">Site E-commerce (HTML / CSS / PHP)</p>
-            <div class="flex gap-4">
-              <button onclick="openModal('modalOptimal')" class="bg-pink-500 hover:bg-pink-600 text-white px-4 py-2 rounded text-sm transition">Voir plus</button>
-              <a href="https://github.com/TracyK-12/Optimal_store.git" target="_blank" class="bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded text-sm transition">Code source</a>
-            </div>
-          </div>
-          <!-- Projet QUIZZ -->
-          <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-lg flex flex-col items-center transition-colors duration-300">
-            <img src="img/quizz/logoquizz.png" alt="Logo Quizz" class="w-27 h-24 object-contain mb-4">
-            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1">Quiz Time</h3>
-            <p class="text-gray-500 dark:text-gray-400 text-sm mb-4">Application de quiz (HTML / CSS / REACT JS / API REST)</p>
-            <div class="flex gap-4">
-              <button onclick="openModal('modalQuizz')" class="bg-pink-500 hover:bg-pink-600 text-white px-4 py-2 rounded text-sm transition">Voir plus</button>
-              <a href="https://github.com/TracyK-12/Quizz_ReactJS.git" target="_blank" class="bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded text-sm transition">Code source</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="max-w-3xl mx-auto px-6 text-center mt-10">
-        <p class="text-gray-500 dark:text-gray-300 mb-4">Ces projets sont le reflet de mes compétences et de ma passion pour le développement. Vous pouvez en découvrir davantage sur mon 
-          <u><a href="https://github.com/TracyK-12"> GitHub</a></u> où je partage d'autres projets et contributions.</p>
-      </div>
-    </section>
-
-    <!-- Modal EMS -->
-<div id="modalEMS" class="hidden fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
-  <div class="bg-gray-800 p-6 rounded-lg max-w-2xl relative">
-    <button onclick="closeModal('modalEMS')" class="absolute top-4 right-4 text-white text-2xl">&times;</button>
-    <div class="flex flex-col items-center">
-      <img id="imgEMS" src="img/ems/login_ems.png" class="rounded-lg mb-4 w-full">
-      <div class="flex gap-4">
-        <button onclick="prevImage('EMS')" class="px-4 py-2 bg-gray-700 text-white rounded">← Précédent</button>
-        <button onclick="nextImage('EMS')" class="px-4 py-2 bg-gray-700 text-white rounded">Suivant →</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-    <!-- Modal Optimal -->
-<div id="modalOptimal" class="hidden fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">       
-  <div class="bg-gray-800 p-6 rounded-lg max-w-2xl relative">
-    <button onclick="closeModal('modalOptimal')" class="absolute top-4 right-4 text-white text-2xl">&times;</button>
-    <div class="flex flex-col items-center">
-      <img id="imgOptimal" src="img/optimal/accueil_admin.png" class="rounded-lg mb-4 w-full">
-      <div class="flex gap-4">
-        <button onclick="prevImage('Optimal')" class="px-4 py-2 bg-gray-700 text-white rounded">← Précédent</button>
-        <button onclick="nextImage('Optimal')" class="px-4 py-2 bg-gray-700 text-white rounded">Suivant →</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-    <!-- Modal Quizz -->
-<div id="modalQuizz" class="hidden fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
-  <div class="bg-gray-800 p-6 rounded-lg max-w-2xl relative">
-    <button onclick="closeModal('modalQuizz')" class="absolute top-4 right-4 text-white text-2xl">&times;</button>            
-    <div class="flex flex-col items-center">
-      <img id="imgQuizz" src="img/quizz/accueil.png" class="rounded-lg mb-4 w-full">
-      <div class="flex gap-4">
-        <button onclick="prevImage('Quizz')" class="px-4 py-2 bg-gray-700 text-white rounded">← Précédent</button>
-        <button onclick="nextImage('Quizz')" class="px-4 py-2 bg-gray-700 text-white rounded">Suivant →</button>
-      </div>
-    </div>
-  </div>
-</div>    
-
-
-<!-- section contact -->
-<section id="contact" class="py-20 bg-white dark:bg-darkBg transition-colors duration-300">
-  <div class="max-w-3xl mx-auto px-6 text-center">
-    <h2 class="text-3xl font-bold text-pink-400 mb-6">Me Contacter</h2>
-    <form id="contact-form" class="space-y-6">
-      <input id="name" type="text" placeholder="Nom" class="w-full p-3 rounded bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white transition-colors duration-300" required>
-      <input id="email" type="email" placeholder="Email" class="w-full p-3 rounded bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white transition-colors duration-300" required>
-      <textarea id="message" rows="5" placeholder="Message" class="w-full p-3 rounded bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white transition-colors duration-300" required></textarea>
-      <button type="submit" class="px-6 py-3 bg-pink-500 hover:bg-pink-600 rounded-full transition">Envoyer</button>
-    </form>
-    <p id="feedback" class="mt-4 text-sm"></p>
-  </div>
-</section>
-
-    <footer class="py-6 text-center text-gray-500 dark:text-gray-400">
-      <p>© 2025 Tracy KAJE - Tous droits réservés</p>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-
-    <script>
-      // Images gallery
-      const EMSImages = [
-        "img/ems/accueilEms.png",
-        "img/ems/accueilEms2.png",
-        "img/ems/EUser.png",
-        "img/ems/ViewAllArticles.png",
-        "img/ems/addArticle.png",
-        "img/ems/ViewAllCats.png",
-        "img/ems/ViewEmptyRepports.png",
-        "img/ems/SendRepport.png",
-        "img/ems/AllReport.png",
-        "img/ems/viewDashboard.png",
-        "img/ems/login_ems.png",
-      ];
-      const OptimalImages = [
-        "img/optimal/accueil_bas",
-        "img/optimal/produits.png",
-        "img/optimal/produit_detail.png",
-        "img/optimal/Cart.png",
-        "img/optimal/Categories.png",
-        "img/optimal/categorie_form.png",
-        "img/optimal/utilisateurs.png",
-        "img/optimal/userform.png",
-        "img/optimal/accueil_admin.png",
-        "img/optimal/login.png",
-      ];
-      const QuizzImages = [
-        "img/quizz/accueil.png",
-        "img/quizz/start.png",
-        "img/quizz/play1.png",
-        "img/quizz/play2.png",
-        "img/quizz/play3.png",
-        "img/quizz/play4.png",
-        "img/quizz/result.png",
-      ];
-      let currentIndex = { EMS: 0, Optimal: 0, Quizz: 0 };
-
-      function openModal(id) {
-        document.getElementById(id).classList.remove("hidden");
-      }
-
-      function closeModal(id) {
-        document.getElementById(id).classList.add("hidden");
-      }
-
-      function nextImage(project) {
-        currentIndex[project] =
-          (currentIndex[project] + 1) %
-          (project === "EMS"
-            ? EMSImages.length
-            : project === "Optimal"
-            ? OptimalImages.length
-            : QuizzImages.length);
-        document.getElementById("img" + project).src =
-          project === "EMS"
-            ? EMSImages[currentIndex[project]]
-            : project === "Optimal"
-            ? OptimalImages[currentIndex[project]]
-            : QuizzImages[currentIndex[project]];
-      }
-
-      function prevImage(project) {
-        currentIndex[project] =
-          (currentIndex[project] -
-            1 +
-            (project === "EMS"
-              ? EMSImages.length
-              : project === "Optimal"
-              ? OptimalImages.length
-              : QuizzImages.length)) %
-          (project === "EMS"
-            ? EMSImages.length
-            : project === "Optimal"
-            ? OptimalImages.length
-            : QuizzImages.length);
-        document.getElementById("img" + project).src =
-          project === "EMS"
-            ? EMSImages[currentIndex[project]]
-            : project === "Optimal"
-            ? OptimalImages[currentIndex[project]]
-            : QuizzImages[currentIndex[project]];
-      }
-
-      // Typewriter effect
-      document.addEventListener("DOMContentLoaded", function () {
-        const heroText = document.getElementById("heroText");
-        let text = "Bonjour, je suis Tracy KAJE ✨";
-        let index = 0;
-
-        function typeWriter() {
-          if (index < text.length) {
-            heroText.innerHTML += text.charAt(index);
-            index++;
-            setTimeout(typeWriter, 100);
-          }
-        }
-        typeWriter();
-      });
-
-      // EmailJS
-      document.addEventListener("DOMContentLoaded", function () {
-        emailjs.init("lQfBY5vqDUIBGJUWo");
         
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="hero-text-animated">Transformez vos idées</span>
+                    <span class="hero-highlight">en applications exceptionnelles</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Je suis développeuse web & mobile passionnée par la création d'expériences digitales innovantes et performantes
+                </p>
+                
+                <div class="hero-buttons">
+                    <a href="projects.html" class="btn btn-primary">
+                        <span>Découvrir mes projets</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="contact.html" class="btn btn-secondary">
+                        <span>Me contacter</span>
+                    </a>
+                </div>
 
-        document.getElementById("contact-form")?.addEventListener("submit", function (event) {
-          event.preventDefault();
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/tracy-kaje-2146a1255/" target="_blank" class="social-link" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/TracyK-12" target="_blank" class="social-link" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://discord.gg/asHGdcfh" target="_blank" class="social-link" title="Discord">
+                        <i class="fab fa-discord"></i>
+                    </a>
+                </div>
+            </div>
 
-          const formData = {
-            user_name: document.getElementById("name").value,
-            user_email: document.getElementById("email").value,
-            message: document.getElementById("message").value,
-          };
+            <div class="hero-image">
+                <div class="profile-card">
+                    <img src="img/profil-ia.jpg" alt="Tracy KAJE - Développeuse Web" class="profile-img">
+                    <div class="profile-badge">
+                        <span>Open to opportunities</span>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-          emailjs.send("service_g7cnh5b", "template_tbe4ou2", formData)
-            .then(() => {
-              document.getElementById("feedback").innerText = "✅ Message envoyé avec succès !";
-              document.getElementById("feedback").style.display = "block";
-              document.getElementById("contact-form").reset();
-            })
-            .catch((error) => {
-              document.getElementById("feedback").innerText = "❌ Une erreur est survenue.";
-              document.getElementById("feedback").style.display = "block";
-              console.error("Erreur EmailJS :", error);
-            });
-        });
-      });
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <span>Scroll pour découvrir</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
 
-      // Theme toggle
-      const themeIcon = document.getElementById("themeIcon");
+    <!-- Featured Section -->
+    <section class="featured-section">
+        <div class="container">
+            <div class="featured-grid">
+                <div class="featured-card">
+                    <div class="featured-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Développement Moderne</h3>
+                    <p>Créez avec les dernières technologies et frameworks</p>
+                </div>
+                <div class="featured-card">
+                    <div class="featured-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Design Responsive</h3>
+                    <p>Des interfaces qui s'adaptent à tous les écrans</p>
+                </div>
+                <div class="featured-card">
+                    <div class="featured-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Solutions Innovantes</h3>
+                    <p>Des approches créatives pour vos défis techniques</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      // Check local storage for saved theme
-      const savedTheme = localStorage.getItem("theme");
-      if (savedTheme) {
-        document.documentElement.classList.toggle("dark", savedTheme === "dark");
-        themeIcon.className = savedTheme === "dark" ? "fas fa-moon" : "fas fa-sun";
-      }
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Prêt à collaborer?</h2>
+                <p>Transformons ensemble votre vision en réalité. Contactez-moi pour discuter de votre prochain projet.</p>
+                <a href="contact.html" class="btn btn-primary">Commencer une conversation</a>
+            </div>
+        </div>
+    </section>
 
-      // Toggle theme function
-      function toggleTheme() {
-        const html = document.documentElement;
-        const isDark = html.classList.toggle("dark");
-        localStorage.setItem("theme", isDark ? "dark" : "light");
-        themeIcon.className = isDark ? "fas fa-moon" : "fas fa-sun";
-      }
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Tracy KAJE</h4>
+                    <p>Développeuse web & mobile | Créatrice d'expériences digitales</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="about.html">À Propos</a></li>
+                        <li><a href="projects.html">Projets</a></li>
+                        <li><a href="skills.html">Compétences</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Réseaux Sociaux</h4>
+                    <div class="footer-socials">
+                        <a href="https://linkedin.com/in/tracy-kaje-2146a1255/" target="_blank">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/TracyK-12" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://discord.gg/asHGdcfh" target="_blank">
+                            <i class="fab fa-discord"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Tracy KAJE - Tous droits réservés | Créé avec <i class="fas fa-heart"></i> et du code</p>
+            </div>
+        </div>
+    </footer>
 
-      document.addEventListener("DOMContentLoaded", () => {
-        const savedTheme = localStorage.getItem("theme");
-        if (savedTheme === "light") {
-          document.documentElement.classList.remove("dark");
-          themeIcon.className = "fas fa-sun";
-        }
-      });
-    </script>
-  </body>
+    <script src="js/main.js"></script>
+</body>
 </html>
