@@ -262,12 +262,14 @@ html.dark .theme-toggle {
 .hero-text-animated {
     display: block;
     opacity: 0;
-    animation: fadeInUp 0.8s ease-out forwards;
+    animation: fadeInUp 0.8s ease-out 0.2s forwards;
 }
 
 .hero-highlight {
     display: block;
     color: inherit;
+    animation: fadeInUp 0.8s ease-out 0.4s forwards;
+    opacity: 0;
 }
 
 @keyframes slideInLeft {
