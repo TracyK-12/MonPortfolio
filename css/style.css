@@ -383,24 +383,34 @@ html.dark .social-link {
 
 .hero-image {
     animation: slideInRight 0.8s ease-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .profile-card {
     position: relative;
     display: inline-block;
+    width: 100%;
+    max-width: 380px;
+    aspect-ratio: 1;
 }
 
 .profile-img {
-    width: 320px;
-    height: 320px;
-    border-radius: 16px;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
     object-fit: cover;
+    object-position: center;
     box-shadow: var(--shadow-lg);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: block;
+    border: 3px solid var(--primary-color);
 }
 
 .profile-img:hover {
-    transform: scale(1.02);
+    transform: scale(1.03);
+    box-shadow: 0 30px 60px rgba(0, 102, 204, 0.3);
 }
 
 .profile-badge {
@@ -1472,14 +1482,17 @@ html.dark .projects-section {
     perspective: 1000px;
     position: relative;
     width: 100%;
+    max-width: 100%;
 }
 
 .device-mockup.laptop {
-    max-width: 600px;
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 .device-mockup.mobile {
-    max-width: 350px;
+    max-width: 380px;
+    margin: 0 auto;
 }
 
 .device-frame {
@@ -1500,6 +1513,7 @@ html.dark .projects-section {
 .device-mockup.mobile .device-frame {
     aspect-ratio: 9 / 16;
     border-radius: 35px;
+    padding: 15px;
 }
 
 .device-mockup:hover .device-frame {
@@ -1507,8 +1521,8 @@ html.dark .projects-section {
 }
 
 .device-content {
-    width: calc(100% - 2px);
-    height: calc(100% - 2px);
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
     border-radius: 12px;
     overflow: hidden;
     background: #fff;
@@ -1525,8 +1539,9 @@ html.dark .projects-section {
 .device-content img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     display: block;
+    background: #fff;
 }
 
 .project-info {
@@ -1711,8 +1726,11 @@ html.dark .github-cta p {
     }
 
     .profile-img {
-        width: 250px;
-        height: 250px;
+        max-width: 280px;
+    }
+
+    .profile-card {
+        max-width: 280px;
     }
 
     .cta-content h2 {
