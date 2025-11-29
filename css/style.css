@@ -742,8 +742,8 @@ html.dark .footer-bottom {
 
 /* ==================== PAGE HERO ==================== */
 .page-hero {
-    padding: 120px 20px 60px;
-    background: linear-gradient(135deg, rgba(236, 72, 153, 0.05), rgba(139, 92, 246, 0.05));
+    padding: 80px 20px 40px;
+    background: linear-gradient(135deg, rgba(0, 82, 163, 0.05), rgba(0, 102, 204, 0.05));
     text-align: center;
     margin-top: 70px;
 }
@@ -773,7 +773,7 @@ html.dark .page-hero p {
 
 /* ==================== ABOUT SECTION ==================== */
 .about-content {
-    padding: 80px 20px;
+    padding: 50px 20px 80px;
 }
 
 .about-grid {
@@ -1505,7 +1505,7 @@ html.dark .form-group textarea {
 
 /* ==================== PROJECTS PAGE ==================== */
 .projects-section {
-    padding: 80px 0;
+    padding: 50px 0 80px;
     background: var(--background-light);
 }
 
@@ -1516,7 +1516,7 @@ html.dark .projects-section {
 .projects-list {
     display: flex;
     flex-direction: column;
-    gap: 120px;
+    gap: 80px;
 }
 
 .project-showcase {
