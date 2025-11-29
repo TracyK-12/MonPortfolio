@@ -1,9 +1,9 @@
 /* ==================== VARIABLES & RESET ==================== */
 :root {
-    --primary-color: #0066cc;
-    --primary-dark: #004999;
-    --secondary-color: #0080ff;
-    --accent-color: #00aaff;
+    --primary-color: #0052a3;
+    --primary-dark: #003d7a;
+    --secondary-color: #0066cc;
+    --accent-color: #0080ff;
     --background-light: #ffffff;
     --background-dark: #0a1428;
     --card-light: #f8fbff;
@@ -392,25 +392,21 @@ html.dark .social-link {
     position: relative;
     display: inline-block;
     width: 100%;
-    max-width: 380px;
-    aspect-ratio: 1;
+    max-width: 340px;
 }
 
 .profile-img {
     width: 100%;
-    height: 100%;
-    border-radius: 20px;
-    object-fit: cover;
-    object-position: center;
+    height: auto;
+    border-radius: 15px;
     box-shadow: var(--shadow-lg);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: block;
-    border: 3px solid var(--primary-color);
 }
 
 .profile-img:hover {
-    transform: scale(1.03);
-    box-shadow: 0 30px 60px rgba(0, 102, 204, 0.3);
+    transform: scale(1.02);
+    box-shadow: 0 20px 50px rgba(0, 102, 204, 0.2);
 }
 
 .profile-badge {
@@ -783,31 +779,101 @@ html.dark .page-hero p {
 .about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    gap: 80px;
     align-items: center;
+}
+
+.about-image-wrapper {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(0, 52, 163, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-image-wrapper:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 40px 80px rgba(0, 52, 163, 0.25);
 }
 
 .about-image img {
     width: 100%;
-    border-radius: 16px;
-    box-shadow: var(--shadow-lg);
+    display: block;
+    border-radius: 20px;
 }
 
 .about-text h2 {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     margin-bottom: 1.5rem;
     color: var(--primary-color);
+    font-weight: 800;
 }
 
-.about-text p {
-    font-size: 1rem;
+.intro-text {
+    font-size: 1.15rem;
     line-height: 1.8;
-    margin-bottom: 1.5rem;
-    color: #64748b;
+    margin-bottom: 2rem;
+    color: var(--text-light);
 }
 
-html.dark .about-text p {
-    color: #cbd5e1;
+html.dark .intro-text {
+    color: var(--text-dark);
+}
+
+.about-highlight {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: rgba(0, 82, 163, 0.05);
+    border-left: 4px solid var(--primary-color);
+    border-radius: 8px;
+}
+
+.about-highlight h3 {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.about-highlight p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-light);
+    margin: 0;
+}
+
+html.dark .about-highlight {
+    background: rgba(0, 82, 163, 0.1);
+}
+
+html.dark .about-highlight p {
+    color: var(--text-dark);
+}
+
+.skills-preview {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.skill-preview-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background: white;
+    border-radius: 8px;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+html.dark .skill-preview-item {
+    background: var(--card-dark);
+    color: var(--accent-color);
+}
+
+.skill-preview-item i {
+    font-size: 1.3rem;
 }
 
 /* ==================== INFO SECTION ==================== */
@@ -1726,11 +1792,12 @@ html.dark .github-cta p {
     }
 
     .profile-img {
-        max-width: 280px;
+        max-width: 100%;
+        height: auto;
     }
 
     .profile-card {
-        max-width: 280px;
+        max-width: 100%;
     }
 
     .cta-content h2 {
