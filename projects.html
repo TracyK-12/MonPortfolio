@@ -23,6 +23,7 @@
                     <a href="index.html" class="nav-link">Accueil</a>
                     <a href="about.html" class="nav-link">À Propos</a>
                     <a href="projects.html" class="nav-link active">Projets</a>
+                    <a href="design.html" class="nav-link">Design UI/UX</a>
                     <a href="skills.html" class="nav-link">Compétences</a>
                     <a href="contact.html" class="nav-link">Contact</a>
                 </nav>
@@ -66,7 +67,7 @@
                         <p class="project-subtitle">Application de gestion de stock</p>
                         <div class="project-meta">
                             <span class="meta-item">
-                                <i class="fas fa-calendar"></i> 2024
+                                <i class="fas fa-calendar"></i> 2025
                             </span>
                             <span class="meta-item">
                                 <i class="fas fa-users"></i> Projet Personnel
@@ -115,7 +116,7 @@
                         <p class="project-subtitle">Plateforme e-commerce moderne</p>
                         <div class="project-meta">
                             <span class="meta-item">
-                                <i class="fas fa-calendar"></i> 2024
+                                <i class="fas fa-calendar"></i> 2025
                             </span>
                             <span class="meta-item">
                                 <i class="fas fa-users"></i> Projet Personnel
@@ -154,7 +155,7 @@
                         <div class="device-mockup laptop">
                             <div class="device-frame">
                                 <div class="device-content">
-                                    <video src="img/quizz/demo.mp4" autoplay muted loop playsinline poster="img/quizz/logoquizz.png"></video>
+                                    <video src="videos/demo_quizz.mp4" autoplay muted loop playsinline poster="img/quizz/logoquizz.png"></video>
                                 </div>
                             </div>
                         </div>
@@ -164,7 +165,7 @@
                         <p class="project-subtitle">Application de quiz interactive</p>
                         <div class="project-meta">
                             <span class="meta-item">
-                                <i class="fas fa-calendar"></i> 2024
+                                <i class="fas fa-calendar"></i> 2025
                             </span>
                             <span class="meta-item">
                                 <i class="fas fa-users"></i> Projet Académique
@@ -248,5 +249,14 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script>
+        // Accélérer les vidéos à 1.5x la vitesse normale
+        document.addEventListener('DOMContentLoaded', function() {
+            const videos = document.querySelectorAll('video');
+            videos.forEach(video => {
+                video.playbackRate = 1.25;
+            });
+        });
+    </script>
 </body>
 </html>
